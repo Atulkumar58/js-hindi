@@ -1,4 +1,3 @@
-me){
-    //     console.log("Please provide a username");
-    //     return;
-    // }
+
+    console.log("Hello from IIFE");
+})() // Output: Hello from IIFE 
