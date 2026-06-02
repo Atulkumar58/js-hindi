@@ -1,11 +1,11 @@
-// const coding = ["JavaScript", "C++", "Java", "Ruby", "Python"];
+const coding = ["JavaScript", "C++", "Java", "Ruby", "Python"];
 
-// const values= coding.forEach((item, index) => {
-//     console.log (item)
-// }) // Output: JavaScript, C++, Java, Ruby, Python
+const values= coding.forEach((item, index) => {
+    console.log (item)
+}) // Output: JavaScript, C++, Java, Ruby, Python
 
-// console.log(values) // Output: undefined
-// // forEach method does not return any value, it returns undefined. It is used to execute a provided function once for each array element.
+console.log(values) // Output: undefined
+// forEach method does not return any value, it returns undefined. It is used to execute a provided function once for each array element.
 
 const myNums = [1, 2, 3, 4, 5, 6 , 7, 8, 9, 10];
 
