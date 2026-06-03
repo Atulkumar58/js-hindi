@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or charcha</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // Your JavaScript code here
+        const newDiv = document.createElement("div");
+        console.log(newDiv);
+
+        newDiv.setAttribute("className", "child");
+        newDiv.id= "child1";
+        newDiv.setAttribute("title", "Generate");
+        newDiv.style.color = "red";
+        newDiv.innerHTML = "This is a new div";
+        newDiv.style.padding = "10px";
+        const addTxt= document.createTextNode(" made by Atul chaudhary");
+        newDiv.appendChild(addTxt);
+        document.body.appendChild(newDiv);
+    </script>
+</body>
+</html>
