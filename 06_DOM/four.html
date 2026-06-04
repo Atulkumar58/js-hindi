@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or Code | DOM</title>
+</head>
+<body style="background-color: black; color : white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    <script>
+        function addLanguage(langName){
+            const newLi = document.createElement("li");
+            newLi.innerHTML = `${langName}`;
+            document.querySelector(".language").appendChild(newLi);
+        }
+        addLanguage("Python");
+
+        function addOptiLang(langName){
+            const newLi = document.createElement("li");
+            newLi.appendChild(document.createTextNode(langName));
+            document.querySelector(".language").appendChild(newLi);
+        }
+        addOptiLang("C++");
+
+        //EDIT
+        const secondLang = document.querySelector(".language").children[1];
+        secondLang.innerHTML = "Python 3.10";
+        
+        const newLi= document.createElement("li");
+        newLi.innerHTML = "java";
+        secondLang.replaceWith(newLi);
+        newLi.innerText = "Python 3.10.5";
+
+        //edit
+        const firstLang = document.querySelector(".language").children[0];
+        firstLang.outerHTML = "<li>ruby</li>"
+
+        //DELETE
+        const lastLang = document.querySelector(".language").children[2];
+        // lastLang.remove();
+        lastLang.outerHTML = "";
+    </script>
+</body>
+</html>
