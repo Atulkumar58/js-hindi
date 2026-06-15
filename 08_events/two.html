@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> CHai or code
+    </h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // const hey= function(){console.log("stop button clicked");}
+
+    const change= function(){
+        // console.log(document.body.querySelector("h1").innerHTML);
+        document.body.querySelector("h1").innerHTML= "Hello World";
+    }
+    // setTimeout(hey, 5000);
+    const changeTimeout = setTimeout(change, 4000);
+    console.log("hello")
+
+    document.getElementById("stop").addEventListener("click", function(){
+        clearTimeout(changeTimeout);
+        console.log("changed");
+    })
+</script>
+</html>

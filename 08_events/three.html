@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> CHai or Javascript
+    </h1>
+    <button id="start" style="height: 30px; width: 100px; font-size: 16px;">start</button>
+    <button id="stop" style="height: 30px; width: 100px; font-size: 16px;">stop</button>
+</body>
+<script>
+    var intervalId;
+    document.getElementById("start").addEventListener("click", function(){
+        const sayDate = function(){
+        const date = new Date();
+        console.log(`Hello World ${date}`);
+    }
+     intervalId = setInterval(sayDate, 1000);
+    })
+    
+
+    document.getElementById("stop").addEventListener("click", function(){
+        clearInterval(intervalId);
+    });
+</script>
+</html>
