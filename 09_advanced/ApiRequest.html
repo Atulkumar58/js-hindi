@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+             background-color: grey;
+             color= black;
+        }
+       
+    </style>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="username">
+        <button type="submit">Submit</button> 
+    </form>
+    <div id="result">
+
+    </div>
+</body>
+<script>
+    const form= document.querySelector('#form');
+    const requestURL= 'https://api.github.com/users/';
+    const result= document.querySelector('#result');
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const username= document.querySelector('#username').value;
+        const url= `${requestURL}${username}`;
+        const xhr= new XMLHttpRequest();
+        xhr.open("get", url);
+        // console.log(xhr.readyState);
+            xhr.onreadystatechange= function(){
+            // console.log(xhr.readyState);
+            if(xhr.readyState === 4){
+                const data= JSON.parse(this.responseText);
+                // console.log(data);
+                // console.log(`The number of follower of ${data.login} are ${data.followers}`);
+
+                // const user= new XMLHttpRequest();
+                // user.open('get', )
+                result.innerHTML = `<img src = ${data.avatar_url} width=200px height=200px> <br> <h2>${data.name}</h2>`;
+            
+            }
+        }
+        xhr.send();
+    });
+    
+    
+</script>
+</html>
